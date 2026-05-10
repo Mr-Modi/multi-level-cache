@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.Map;
 
-public class LFUEvictionPolicy<Key> implements EvictionPolicy<Key> {
+public class LFUIEvictionPolicy<Key> implements IEvictionPolicy<Key> {
 
     private final Map<Key, Integer> keyFrequencyMap;
 
@@ -12,7 +12,7 @@ public class LFUEvictionPolicy<Key> implements EvictionPolicy<Key> {
 
     private int minFrequency;
 
-    public LFUEvictionPolicy() {
+    public LFUIEvictionPolicy() {
 
         this.keyFrequencyMap = new HashMap<>();
         this.frequencyKeysMap = new HashMap<>();

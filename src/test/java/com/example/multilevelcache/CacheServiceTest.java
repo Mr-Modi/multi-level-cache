@@ -5,7 +5,7 @@ import org.example.multilevelcache.model.ReadResponse;
 import org.example.multilevelcache.model.WriteResponse;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.example.multilevelcache.policy.LRUEvictionPolicy;
+import org.example.multilevelcache.policy.LRUIEvictionPolicy;
 import org.example.multilevelcache.provider.CacheProvider;
 import org.example.multilevelcache.provider.DefaultLevelCache;
 import org.example.multilevelcache.provider.NullEffectLevelCache;
@@ -58,7 +58,7 @@ public class CacheServiceTest {
 
     private CacheProvider<String, String> createCache(int capacity) {
         return new CacheProvider<>(
-                new LRUEvictionPolicy<>(),
+                new LRUIEvictionPolicy<>(),
                 new InMemoryStorage<>(capacity));
     }
 }

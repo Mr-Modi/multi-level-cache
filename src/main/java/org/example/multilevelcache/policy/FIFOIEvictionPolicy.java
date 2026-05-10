@@ -4,11 +4,11 @@ import java.util.Iterator;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-public class FIFOEvictionPolicy<Key> implements EvictionPolicy<Key> {
+public class FIFOIEvictionPolicy<Key> implements IEvictionPolicy<Key> {
 
     private final Set<Key> keys;
 
-    public FIFOEvictionPolicy() {
+    public FIFOIEvictionPolicy() {
         this.keys = new LinkedHashSet<>();
     }
 
